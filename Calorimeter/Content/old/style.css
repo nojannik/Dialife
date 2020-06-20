@@ -1,0 +1,57 @@
+﻿body {
+    background: url('images/ag-squaree.png') repeat scroll;
+}
+header{
+    width:1200px;
+    margin:0 auto;
+    background: url('images/headerr.jpg') ;
+    height:400px;
+}
+.content{
+    width:1200px;
+    margin:0 auto;
+    background-color:#fff;
+    min-height:400px;
+  
+}
+.footer{
+    width:1200px;
+    margin:0 auto;
+    background-color: #ff7247;
+    height:50px;
+}
+
+ul{
+    width:1200px;
+    height:50px;
+    margin:0 auto;
+    background-color: #ff7247;
+    list-style: none;
+
+}
+li {
+  float: left;
+ 
+}
+
+a {
+  display: block;
+  padding:18px;
+  color:#fff;
+  text-decoration: none;
+
+}
+
+a:hover{
+    background-color :  #fff;
+    color:#ff7247;
+    text-decoration: none;
+}
+
+.in-ul{
+    background-color: #fff !important;
+}
+
+.in-li{
+    display:block;
+}

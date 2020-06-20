@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://cdpn.io/SitePoint/fullpage/PwmjYp -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="apple-touch-icon" type="image/png" href="https://static.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111">
+<title>CodePen - Skeleton layout example</title>
+<link rel="stylesheet" href="./normalize.min.css">
+<link rel="stylesheet" href="./font-awesome.min.css">
+<link rel="stylesheet" href="./skeleton.2.02.css">
+<style>
+/* GENERAL STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+body {
+  background: #FDD761;
+  font-family: 'Lucida Sans Unicode', 'Arial', serif;
+  color: white;
+}
+
+h1, h3, h4, header .btn {
+  font-weight: 700;
+}
+
+h1 {
+  margin: 100px 0 20px;
+  text-transform: uppercase;
+  font-size: 2.6rem;
+}
+
+h3 {
+  margin-bottom: 25px;
+  font-size: 2.3rem;
+  text-align: left;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h3:after {
+  content: '';
+  display: block;
+  width: 10%;
+  padding-top: 5px;
+  border-bottom: 3px solid whitesmoke;
+}
+
+h1 + h4 {
+  font-weight: normal;
+}
+
+a {
+  text-align: center;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+  background: #fcca2f;
+  font-size: 14px;
+  color: steelblue;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all ease .3s;
+          transition: all ease .3s;
+}
+
+.btn {
+  font-size: 1.2em;
+  border-radius: 5px;
+  padding: 12px 30px;
+}
+
+.block {
+  width: 130px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+
+/* HEADER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+header .btn {
+  text-transform: uppercase;
+}
+
+header a:hover, .about a:hover {
+  background: #fcc316;
+}
+
+header .btn, .services {
+  margin-top: 100px;
+}
+
+header {
+  padding: 80px 0 150px;
+}
+
+.about, .contact {
+  padding: 150px 0;
+}
+
+header {
+  background: url("https://unsplash.it/1080/720/?image=377") no-repeat fixed center / cover;
+  text-align: center;
+}
+
+nav ul, .contact ul {
+  list-style: none;
+  font-size: 0;
+}
+
+nav li, .contact li {
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+nav li {
+  width: 50%;
+}
+
+nav a {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  padding: 7px 0;
+  line-height: 30px;
+}
+
+nav li:nth-child(2n+1) a:after {
+  position: absolute;
+  content: '';
+  top: 19.5px;
+  right: -2.5px;
+  z-index: 10;
+  border-radius: 100%;
+  background: steelblue;
+  width: 5px;
+  height: 5px;
+}
+
+
+
+/* SERVICES STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.services a {
+  padding: 25px;
+  background: #fafafa;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.services a:hover {
+  color: black;
+}
+
+.services span {
+  font-size: 5.5em;
+  color: #f4ba04;
+}
+
+.services a:hover span {
+  color: white;
+}
+
+.services p {
+  margin: 15px 0 0;
+}
+
+
+
+/* ABOUT STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.about {
+  background: url("https://unsplash.it/1080/720/?image=349") no-repeat fixed center / cover;
+  color: black;
+}
+
+.about .one-third, 
+.about .two-thirds {
+  background: white;
+  background: rgba(255,255,255,.3);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.about .one-third {
+  margin-top: 20px;
+}
+
+.about a {
+  margin-top: 10px;
+}
+
+.about ul {
+  margin-bottom:18px;
+}
+
+.about h3:after, .contact h3:after {
+  border-color: black;
+}
+
+.about .center {
+  text-align: center;
+}
+
+.about .bottom {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.about .one-third a {
+  margin: 10px auto;
+  width: 50%;
+  display: block;
+} 
+
+.about .two-thirds p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/* CONTACT STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.contact {
+  color: black;
+  text-align: center;
+}
+
+.contact p {
+  margin: 70px 0 0;
+}
+
+.contact ul a {
+  margin-top: 50px;
+  box-shadow: none;
+  background: none;
+  margin-left: 30px;
+}
+
+.contact li:nth-child(1) a {
+  margin-left: 0;
+}
+
+.contact span {
+  font-size: 2em;
+  color: white;
+  -webkit-transition: color ease .4s;
+          transition: color ease .4s;
+}
+
+.contact span:hover {
+  color: steelblue;
+}
+
+.contact .btn-blue {
+  position: relative;
+  margin-top: 30px;
+  color: white;
+  background: steelblue;
+  box-shadow: 0 8px #3b6d97;
+}
+
+.contact .btn-blue:hover {
+  background: #427aa9;
+  color: white;
+}
+
+.contact .btn-blue:after {
+  position: absolute;
+  content: '☃';
+  top: 5px;
+  right: 30px;
+  font-size: 1.6em;
+}
+
+.contact .btn-blue:active {
+  box-shadow: 0 4px #3b6d97;
+  -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+.contact .creator a {
+    background: none;
+}
+
+
+
+/* MEDIA QUERIES STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 550px) {
+
+  nav li {
+    width: auto;
+  }
+
+  a {
+    box-shadow: 0 8px #f4ba04;
+  }
+
+  nav a {
+    padding: 7px;
+    border-right: 1px solid #fabd03;
+    width: 80px;
+  }
+
+  nav li:nth-child(2n+1) a:after {
+    content: none;
+  }
+
+  nav li:last-child a {
+    border-right: none;
+  }
+
+  header a:hover, .about a:hover {
+    box-shadow: 0 8px #f4ba04;
+  }
+
+  header a:active, .about a:active {
+    box-shadow: 0 4px #f4ba04;
+    -webkit-transform: translateY(4px);
+        -ms-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+
+  .about .one-third {
+    margin-top: 0;
+  }
+  
+  .about .one-third a {
+    width: 35%;  
+  }
+  
+  .contact .creator a {
+    box-shadow: none;
+  }
+
+}
+
+
+
+@media (min-width: 750px) {
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-size: 2.8rem;
+  }
+
+  h4 {
+    font-size: 2.4rem;
+  }
+
+  .services a:hover {
+    box-shadow: 0 -8px white;
+    -webkit-transform: scale(1.15);
+        -ms-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  
+  .contact ul a {
+    margin-left: 45px;
+  }
+
+  .contact ul span {
+    font-size: 3em;
+  }
+
+}
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+
+<header>
+<div class="container">
+<div class="row">
+<div class="twelve columns">
+<nav>
+<ul>
+<li><a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#">About</a></li>
+<li><a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#">Work</a></li>
+<li><a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#">Writing</a></li>
+<li><a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#">Contact</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<h1>- Design What You Imagine -</h1>
+<h4>Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui.</h4>
+<a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#" class="btn">Hire me</a>
+</div>
+</div>
+<section class="services">
+<div class="row">
+<div class="twelve columns">
+<h3>My areas of expertise</h3>
+</div>
+</div>
+<div class="row">
+<div class="one-half column">
+<a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#">
+<h4>Graphic Design</h4>
+<span class="fa fa-picture-o"></span>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+</a>
+</div>
+<div class="one-half column">
+<a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#">
+<h4>Web Design</h4>
+<span class="fa fa-leaf"></span>
+<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+</a>
+</div>
+</div>
+</section>
+</div>
+</header>
+
+<section class="about">
+<div class="container">
+<div class="row">
+<div class="twelve columns">
+<h3>Who am I</h3>
+</div>
+</div>
+<div class="row bottom">
+<div class="two-thirds column">
+<p>Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero,
+sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
+<p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+<p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.</p>
+</div>
+<div class="one-third column">
+<h4>Degrees</h4>
+<ul>
+<li>BA in Information Systems</li>
+<li>MSc in Applied Mathematics </li>
+<li>Phd in Artificial Intelligence</li>
+</ul>
+<h4>Honors</h4>
+<ul>
+<li>1st place in the contest "MyContest"</li>
+<li>Best Paper for 2014</li>
+</ul>
+<a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#" class="btn">CV</a>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<h4 class="center">Interested in samples of my work?</h4>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#" class="btn block">Visit Codepen</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="contact">
+<div class="container">
+<div class="row">
+<div class="twelve columns">
+<h3>Contact</h3>
+</div>
+</div>
+<div class="row">
+<div class="offset-by-two eight columns">
+<ul>
+<li><a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#" title=""><span class="fa fa-facebook"></span></a></li>
+<li><a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#" title=""><span class="fa fa-twitter"></span></a></li>
+<li><a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#" title=""><span class="fa fa-dribbble"></span></a></li>
+<li><a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#" title=""><span class="fa fa-linkedin"></span></a></li>
+<li><a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#" title=""><span class="fa fa-github"></span></a></li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<a href="https://cdpn.io/SitePoint/fullpage/PwmjYp#" class="btn block btn-blue">Mail me</a>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<p class="creator">A demo by George Martsoukos. <a href="http://www.sitepoint.com/getting-started-with-skeleton-simple-css-boilerplate">See article</a>.</p>
+</div>
+</div>
+</div>
+</section>
+<script src="./stopExecutionOnTimeout-db44b196776521ea816683afab021f757616c80860d31da6232dedb8d7cc4862.js.download"></script>
+<script id="rendered-js">
+// Demo by George Martsoukos
+// See: http://www.sitepoint.com/getting-started-with-skeleton-simple-css-boilerplate
+//# sourceURL=pen.js
+    </script>
+
+
+</body></html>
